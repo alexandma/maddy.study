@@ -1,0 +1,630 @@
+body {
+    background: #fafafa;
+  }
+  
+  .short-text {
+    display: none;
+    visibility: hidden;
+  }
+  
+  p {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #5e5e5e;
+  }
+  
+  ion-icon {
+    position: relative;
+    top: 2px;
+    right: 2px;
+  }
+  
+  li {
+    list-style-type: none;
+  }
+  
+  h1 {
+    font-family: "Poppins", sans-serif;
+  }
+  
+  h3 {
+    font-family: "Poppins", sans-serif;
+    color: #a4c8ff; /* ed8 */
+  }
+  
+  h3,
+  a {
+    color: #a4c8ff;
+    text-decoration: underline;
+  }
+  
+  a,
+  a:hover,
+  a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .navbar {
+    padding: 15px 10px;
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+  }
+  
+  .line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid #ddd;
+    margin-top: 40px;
+  }
+  
+  /* Updated .picofme: Start with no shadow, then animate slide-in and shadow appearance */
+  .picofme {
+    display: block;
+    height: 350px;
+    width: auto;
+    border: #a4c8ff solid 0px;
+    /* Rounded corners */
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    /* Start with no shadow */
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    opacity: 0;
+    transform: translateX(-50px);
+    /* Combine slideIn and shadowAnimation animations */
+    animation: slideIn 1.5s forwards ease-out, shadowAnimation 1s forwards ease-out;
+    animation-delay: 0s, 1.5s;
+  }
+
+
+  .picofme {
+    display: block;
+    height: 350px;
+    width: auto;
+    border-radius: 20px;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0); 
+    opacity: 0; /* Start fully invisible */
+    transform: translateX(-50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.cgen {
+  display: block;
+  height: 350px;
+  width: auto;
+  border: #a4c8ff solid 0px;
+  /* Rounded corners */
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  /* Start with no shadow */
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+  opacity: 0;
+  transform: translateX(-50px);
+  /* Combine slideIn and shadowAnimation animations */
+  animation: slideIn 1.5s forwards ease-out, shadowAnimation 1s forwards ease-out;
+  animation-delay: 0s, 1.5s;
+}
+
+
+.picofme {
+  display: block;
+  height: 350px;
+  width: auto;
+  border-radius: 20px;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0); 
+  opacity: 0; /* Start fully invisible */
+  transform: translateX(-50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+  .tag {
+    opacity: 0;
+    transform: translate(0, 10vh);
+    transition: all 2s;
+  }
+  
+  .tag.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  
+  /* ---------------------------------------------------
+    SIDEBAR STYLE
+  ----------------------------------------------------- */
+  
+  .wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+  }
+  
+  #sidebar {
+    min-width: 150px;
+    max-width: 150px;
+    background: #bbd6ff; /* f29 */
+    color: #fff;
+    transition: all 0.3s;
+    position: fixed;
+    overflow-y: scroll;
+    top: 0;
+    bottom: 0;
+  }
+  
+  #sidebar.active {
+    margin-left: -250px;
+  }
+  
+  #sidebar .sidebar-header {
+    padding: 10px;
+    background: #a4c8ff;
+  }
+  
+  #sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #a4c8ff;
+  }
+  
+  #sidebar ul p {
+    color: #fff;
+    padding: 10px;
+  }
+  
+  #sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+  }
+  
+  #sidebar ul li a:hover {
+    color: #5e5e5e;
+    background: #fafafa;
+  }
+  
+  #sidebar ul li a:hover {
+    color: #5e5e5e;
+    background: #fafafa;
+  }
+  
+  ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+  }
+  
+  ul.CTAs {
+    padding: 20px;
+  }
+  
+  ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
+  
+  a.download {
+    background: #fff;
+    color: #5e5e5e;
+  }
+  
+  a.download:hover {
+    background: #7aafff !important;
+    color: #fff !important;
+  }
+  
+  a.article,
+  a.article:hover {
+    background: #5e5e5e !important;
+    color: #fff !important;
+  }
+  
+  /* ---------------------------------------------------
+    CONTENT STYLE
+  ----------------------------------------------------- */
+  
+  #content {
+    width: 100%;
+    padding: 20px;
+    padding-left: 170px;
+    min-height: 100vh;
+    transition: all 0.3s;
+    padding-right: 50px;
+  }
+  
+  /* ---------------------------------------------------
+    MEDIAQUERIES
+  ----------------------------------------------------- */
+  @media (max-width: 800px) {
+    .full-text {
+      font-size: 0px;
+      size: 0;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #sidebar {
+      min-width: 60px;
+      max-width: 60px;
+      background: #bbd6ff;
+      color: #fff;
+      transition: all 0.3s;
+      position: fixed;
+      overflow-y: scroll;
+      top: 0;
+      bottom: 0;
+    }
+  
+    #sidebarCollapse span {
+      display: none;
+    }
+  
+    #content {
+      width: 100%;
+      padding: 20px;
+      padding-left: 80px;
+      min-height: 100vh;
+      transition: all 0.3s;
+      padding-right: 50px;
+    }
+    .short-text {
+      transition: all 0.3s;
+      display: block;
+      visibility: visible;
+      font-size: 27px;
+      padding-left: 7px;
+    }
+  
+    a.full-text {
+      transition: all 0.3s;
+      display: none;
+      visibility: hidden;
+      font-size: 0px;
+      size: 0;
+      height: 50px;
+    }
+  
+    .showup {
+      transition: all 0.3s;
+      visibility: visible;
+      background: #fff;
+      color: #5e5e5e;
+      font-size: 20px;
+      align-items: center;
+      align-self: center;
+      text-align: center;
+      border-radius: 5px;
+      padding: 7px;
+      margin: 0px;
+    }
+  
+    ion-icon {
+      position: relative;
+      top: 0px;
+      right: 0px;
+    }
+  
+    .bullet {
+      height: 1px;
+    }
+  
+    a.download {
+      color: #5e5e5e;
+      display: none;
+      visibility: hidden;
+      height: 40px;
+    }
+    ul.CTAs {
+      padding: 0px;
+    }
+  
+    .picofme {
+      height: 300px;
+      width: auto;
+    }
+  
+    .tag {
+      opacity: 1;
+      transform: none;
+      transition: translate(0, 0);
+    }
+  
+    .tag.visible {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+  
+  .wave {
+    animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+    animation-duration: 2.5s; /* Change to speed up or slow down */
+    animation-iteration-count: infinite; /* Never stop waving :) */
+    transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+    display: inline-block;
+  }
+  
+  @keyframes wave-animation {
+    0% {
+      transform: rotate(0deg);
+    }
+    10% {
+      transform: rotate(14deg);
+    } /* The following five values can be played with to make the waving more or less extreme */
+    20% {
+      transform: rotate(-8deg);
+    }
+    30% {
+      transform: rotate(14deg);
+    }
+    40% {
+      transform: rotate(-4deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+    60% {
+      transform: rotate(0deg);
+    } /* Reset for the last half to pause */
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  /* Strava Widget Styling */
+  .strava-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center widgets */
+    gap: 20px; /* Add space between widgets */
+    margin: 30px auto; /* Add margin to space it from other content */
+  }
+  
+  .strava-container iframe {
+    border-radius: 10px; /* Smooth corners for a better look */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Light shadow effect */
+  }
+  
+  .gr_custom_header_1743590997 {
+    /* customize your Goodreads header here*/
+    border-bottom: 1px solid gray;
+    width: 100%;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 120%
+  }
+  .gr_custom_each_container_1743590997 {
+    /* customize each individual book container here */
+    width: 100%;
+    clear: both;
+    margin-bottom: 10px;
+    overflow: auto;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #aaa;
+  }
+  .gr_custom_book_container_1743590997 {
+    /* customize your book covers here */
+    overflow: hidden;
+    height: 60px;
+      float: left;
+      margin-right: 4px;
+      width: 39px;
+  }
+  .gr_custom_author_1743590997 {
+    /* customize your author names here */
+    font-size: 10px;
+  }
+  .gr_custom_tags_1743590997 {
+    /* customize your tags here */
+    font-size: 10px;
+    color: gray;
+  }
+  .gr_custom_rating_1743590997 {
+    /* customize your rating stars here */
+    float: right;
+  }
+  
+  /* Container for Goodreads widgets */
+  .goodreads-widgets-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+  }
+  
+  /* Generic Goodreads widget style */
+  .goodreads-widget {
+    flex: 0 1 300px; /* Same width as the Top Languages widget */
+    text-align: center;
+    background-color: #fff;
+    border: 2px solid #EBE8D5;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #greeting-icon {
+    display: inline-block;
+    font-size: 3rem;
+  }
+  
+  /* Bounce Animation */
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    5% {
+      transform: translateY(-30px);
+    } /* Big bounce */
+    15% {
+      transform: translateY(0);
+    }
+    20% {
+      transform: translateY(-20px);
+    } /* Medium bounce */
+    30% {
+      transform: translateY(0);
+    }
+    35% {
+      transform: translateY(-10px);
+    } /* Small bounce */
+    45% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(0);
+    } /* Stay still (stall period) */
+  }
+  
+  .bounce {
+    display: inline-block;
+    animation: bounce 5s ease-in-out infinite;
+  }
+  
+  @keyframes pinStab {
+    0% {
+      transform: translateY(0) rotate(0deg);
+    }
+    15% {
+      transform: translateY(10px) rotate(0deg);
+    }    /* Move down */
+    20% {
+      transform: translateY(10px) rotate(10deg);
+    }   /* Slight rotation */
+    25% {
+      transform: translateY(10px) rotate(-10deg);
+    }  /* Rotate other way */
+    30% {
+      transform: translateY(10px) rotate(0deg);
+    }    /* Return */
+    40% {
+      transform: translateY(0) rotate(0deg);
+    }       /* Bounce back */
+    100% {
+      transform: translateY(0) rotate(0deg);
+    }      /* Hold still */
+  }
+  
+  .pin-stab {
+    display: inline-block;
+  }
+  
+  .pin-stab-active {
+    animation: pinStab 4s ease-in-out infinite;
+  }
+  
+  /* Image sliding in from the left */
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateX(-50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+  
+  /* Animate the box-shadow from no shadow to the final value */
+  @keyframes shadowAnimation {
+    from {
+      box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    }
+    to {
+      box-shadow: 10px 10px 0px #cce0ff;
+    }
+  }
+
+  :root {
+    --nav-width: 150px; /* Fixed sidebar width */
+  }
+
+  /* Letter Animation Styles */
+.letter-zip {
+  display: inline-block;
+  position: relative;
+  z-index: 5; /* Behind the sidebar */
+  font-size: 2rem;
+  color: #333;
+  animation: letterZip 10s ease-in-out infinite;
+}
+
+/* Keyframes for the Letter Animation */
+@keyframes letterZip {
+  /* Phase 1: Start offscreen left (hidden behind the sidebar) */
+  0% {
+    transform: translateX(calc(-100% - var(--nav-width)));
+    opacity: 0;
+  }
+  /* Phase 2: Zip in from left to its resting spot */
+  10% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  /* Phase 3: Rest at its spot */
+  70% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  /* Phase 4: Zip out quickly to the right */
+  80% {
+    transform: translateX(100vw);
+    opacity: 1;
+  }
+  /* Phase 5: Fade out offscreen */
+  85% {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+  /* Phase 6: Reset position offscreen left (wait for next cycle) */
+  90%,
+  100% {
+    transform: translateX(calc(-100% - var(--nav-width)));
+    opacity: 0;
+  }
+}
+ 
+
+/* Centering the columns in the technical skills section */
+#technical-skills .row {
+  display: flex;
+  justify-content: space-evenly; /* Evenly space columns */
+  align-items: flex-start;
+  max-width: 900px;  /* Adjust this value as needed */
+  margin: 0 auto;    /* Center the row container */
+}
+#technical-skills .col-md-6 {
+  text-align: center; /* Centers the content inside */
+}
+
+#technical-skills .col-md-6 h3 {
+  text-align: center; /* Keeps the subtitles centered */
+}
+
+#technical-skills .col-md-6 p {
+  display: block; /* Ensures they stack vertically */
+  margin: 0 auto; /* Keeps them centered */
+  text-align: left; /* Keeps icons aligned properly */
+  width: fit-content; /* Prevents stretching across the whole column */
+}
+
+
+
+
+
